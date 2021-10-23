@@ -85,7 +85,3 @@ most_five_stars_filtered =
 -- Finding the top 5 movies with the highest proportion of 5 star ratings
 top_five_movies = LIMIT most_five_stars_filtered 5;
 dump top_five_movies;
-
-
-
-
