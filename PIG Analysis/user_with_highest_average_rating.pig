@@ -1,12 +1,8 @@
 -- Importing the ratings dataset and the users dataset
 ratings = 
-	LOAD 'ml-latest-small/ratings.csv' 
-	USING PigStorage(',') 
+	LOAD 'cleaned_ratings/part-m-00000' 
+	USING PigStorage('|') 
 	AS (userID:chararray, movieID:chararray, rating:int, timestamp:chararray);
-
-
--- Removing the extra row in the ratings dataset
-ratings_headless = FILTER ratings BY userID != 'userId';
 
 -- Grouping the users together
 group_users = GROUP ratings_headless BY userID;
