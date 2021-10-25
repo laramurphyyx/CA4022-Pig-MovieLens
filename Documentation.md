@@ -30,3 +30,8 @@ The following PIG scripts were used to analyse the data:
 - [Finding the movie with the highest number of ratings](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/PIG%20Analysis/movie_with_highest_number_ratings.pig)
 - [Finding the movie with the highest proportion of five star ratings](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/PIG%20Analysis/movies_with_highest_proportion_five_stars.pig)
 - [Finding the user with the highest average rating](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/commit/29e61da307a8aaf9a8c55ede8a5f28f33e7644c9)
+
+### PIG Analaysis 1: Finding the Movie with the Highest Number of Ratings
+This analysis invlolved calculating the count of ratings each movie has received, sorting by this count in descending order and limitting the result to 1 movie. 
+The result showed that Forrest Gump was the movie with the highest amount of ratings, receiving a total of 329 ratings.
+![Result](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Output%20Screenshots/PIG/movie_with_highest_number_ratings.png?raw=true "PIG Analysis 1")
