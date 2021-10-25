@@ -19,3 +19,12 @@ SELECT
 	COUNT(rating) AS count_ratings
 FROM movies_and_ratings
 GROUP BY rating;
+
+-- Finding the most popular rating
+SELECT 
+	rating,
+	COUNT(rating) AS count_ratings
+FROM movies_and_ratings
+GROUP BY rating
+ORDER BY count_ratings DESC
+LIMIT 1;
