@@ -5,15 +5,15 @@ ratings =
 	AS (userID:chararray, movieID:chararray, rating:int, timestamp:chararray);
 
 -- Grouping the users together
-group_users = GROUP ratings_headless BY userID;
+group_users = GROUP ratings BY userID;
 
 -- Caclulating the average ratings given by each user
 average_rating = 
 	FOREACH group_users 
 	GENERATE 
 		group As userID, 
-		SUM(ratings_headless.rating) as num_ratings, 
-		AVG(ratings_headless.rating) AS average_rating;
+		SUM(ratings.rating) as num_ratings, 
+		AVG(ratings.rating) AS average_rating;
 
 -- Finding users with the highest average ratings given
 highest_ratings = 
