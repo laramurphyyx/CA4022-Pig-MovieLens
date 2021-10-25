@@ -16,4 +16,4 @@ average_rating =
 		AVG(ratings.rating) AS average_rating;
 
 -- Exporting the dataset using a bar delimiter
-STORE users_average_rating INTO 'visualisation_users_average_rating' using PigStorage('|');
+STORE average_rating INTO 'visualisation_users_average_rating' using PigStorage('|');
