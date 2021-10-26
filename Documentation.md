@@ -106,6 +106,12 @@ The second output filters the above result to only list the one most popular rat
 
 ### HIVE Analysis 6: Exploring how the Ratings are Distributed by Genre
 
+This analysis shows the breakdown of the number of ratings each genre received. As the genres list was stored in a single column as a string, we had to check the contents of the string for every genre to check which genres were listed.
+
+The following output shows how many ratings each genre received (reading left to right, with genres sorted in alphabtical order).
+
+![HIVE_Result_6](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Output%20Screenshots/HIVE/number_ratings_per_genre.png?raw=true)
+
 ## Visualisations of MovieLens Data
 
 ### Visualisation of the Proportion of Five Star Ratings
