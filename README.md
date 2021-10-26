@@ -6,7 +6,7 @@ This repository contains all files relevant to the CA4022 MovieLens Analysis Ass
 
 All of the following files/directories are available in [this repository](https://github.com/laramurphyyx/CA4022-Pig-MovieLens)
 
-- [ml-latest-small](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Documentation.md): 		Contains the .csv files containing the data used in the cleaning/analyses
+- [ml-latest-small](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/tree/main/ml-latest-small): Contains the .csv files containing the data used in the cleaning/analyses
 - [PIG Cleaning](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/tree/main/PIG%20Cleaning): Contains the .pig scripts used to clean and merge the data
 - [PIG Analysis](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/tree/main/PIG%20Analysis): Contains the .pig scripts used to analyse the data
 - [HIVE Analysis](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/tree/main/HIVE%20Analysis): Contains the .sql scripts used to analyse the data
