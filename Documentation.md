@@ -29,7 +29,7 @@ The following PIG scripts were used to clean and prepare the data for analysis:
 The following PIG scripts were used to analyse the data:
 - [Finding the movie with the highest number of ratings](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/PIG%20Analysis/movie_with_highest_number_ratings.pig)
 - [Finding the movie with the highest proportion of five star ratings](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/PIG%20Analysis/movies_with_highest_proportion_five_stars.pig)
-- [Finding the users with the highest average rating](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/commit/29e61da307a8aaf9a8c55ede8a5f28f33e7644c9)
+- [Finding the users with the highest average rating](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/PIG%20Analysis/user_with_highest_average_rating.pig)
 
 ### PIG Analaysis 1: Finding the Movie with the Highest Number of Ratings
 This analysis invlolved calculating the count of ratings each movie has received, sorting by this count in descending order and limiting the result to 1 movie. 
@@ -89,3 +89,25 @@ This HIVE script calculates the overall amount of times each rating was given, a
 ![HIVE_Result_5]()
 
 ### HIVE Analysis 6: Exploring how the Ratings are Distributed by Genre
+
+## Visualisations of MovieLens Data
+
+### Visualisation of the Proportion of Five Star Ratings
+
+A scatterplot was used to visualise the correlation between the number of ratings a movie received, and the number of five star ratings a movie received.
+
+This data has been queried in [PIG Analysis 2](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/PIG%20Analysis/movies_with_highest_proportion_five_stars.pig) and [HIVE Analysis 2](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/HIVE%20Analysis/movies_with_highest_proportion_five_stars.sql).
+
+This graph shows that the only movies that achieve above 60% five star ratings are movies that have very few (<25) ratings in total. For majority of movies, the proportion of five star ratings are evenly distributed between 0% and 40%. The movies with the highest amount of ratings, however, tend to have a higher proprtion of five star ratings, between 30% and 50%.
+
+![Visualisation_1](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Visualisation/proportion_five_stars.png?raw=true "Proportion of Five Star Ratings")
+
+### Visualisation of Users' Average Rating Compared to Total Number of Ratings
+
+A scatterplot graph was used to show the link between a user's average rating and the total number of ratings they have given. 
+
+This data has been queries in [PIG Analysis 3](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/PIG%20Analysis/user_with_highest_average_rating.pig) and [HIVE Analysis 3](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/HIVE%20Analysis/user_with_highest_average_rating.sql).
+
+The graph below shows that the the lower a user's total number of ratings, the more range they have in their average rating. As the number of ratings a user has given approaches 0, the range of their average rating can be anywhere from 0 to 5. As the number of ratings a user has given increases, their average rating is likely to be in a smaller range of 3 and 3.5.
+
+![Visualisation_2](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Visualisation/users_average_ratings.png?raw=true "Users Average Ratings and Total Ratings")
