@@ -12,7 +12,7 @@ average_rating =
 	FOREACH group_users 
 	GENERATE 
 		group As userID, 
-		SUM(ratings.rating) as num_ratings, 
+		COUNT(ratings.rating) as num_ratings, 
 		AVG(ratings.rating) AS average_rating;
 
 -- Finding users with the highest average ratings given
