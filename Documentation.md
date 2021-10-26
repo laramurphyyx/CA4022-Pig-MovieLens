@@ -68,7 +68,9 @@ The following HIVE scripts were used to analyse the data:
 ### HIVE Analysis 1: Finding the Movie with the Highest Number of Ratings
 The analysis involved in this query was to select the movie ID, the movie title and the number of ratings each movie had from the merged movies and ratings dataset. The result was then sorted by the number of ratings in decscending order and limited to 1 movie in the output.
 
-![HIVE_Result_1]()
+The output shows that Forrest Gump received the most ratings, with a total of 329 ratings.
+
+![HIVE_Result_1](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Output%20Screenshots/HIVE/movie_with_highest_number_ratings.png?raw=true "HIVE Analysis 1")
 
 ### HIVE Analysis 2: Finding the Movie with the Highest Proportion of Five Star Ratings
 
@@ -76,17 +78,27 @@ The analysis involved in this query was to select the movie ID, the movie title 
 ### HIVE Analysis 3: Finding the Users with the Highest Average Rating
 This query calculated the average rating given by each user. This result was put in descending order and outputted the user ID, the total amount of ratings and the average rating of the five users with the highest average rating.
 
-![HIVE_Result_3]()
+The output below suggests that as the number of ratings a user has given increases, the lower their average rating tends to be (this is also shown in the visualisations section below). 
+
+![HIVE_Result_3](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Output%20Screenshots/HIVE/user_with_highest_average_rating.png?raw=true "HIVE Analysis 3")
 
 ### HIVE Analysis 4: Finding the Count of Each Rating per Movie
-This analysis grouped each movie and each possible rating together and calculated the number of times each rating was assigned to a movie. 
+This analysis created several tables to calculate the count of each rating for each movie. There were 6 extra tables made to represent the star ratings 0 through 5. These were merged and the output was limited to 10 movies for easier reading.
 
-![HIVE_Result_4]()
+The output displays the movie's ID and title, and also shows (in order) the number of 0 star ratings, 1 star ratings, 2 star ratings, 3 star ratings, 4 star ratings and 5 star ratings. 
+
+![HIVE_Result_4](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Output%20Screenshots/HIVE/number_each_rating_per_movie.png?raw=true "HIVE Analysis 4")
 
 ### HIVE Analysis 5: Finding the Most Popular Rating for All Movies
 This HIVE script calculates the overall amount of times each rating was given, and sorts each rating by the amount of times it was chosen in descending order.
 
-![HIVE_Result_5]()
+The first output shows the number of times each rating was chosen, and we can see that ratings 3 and 4 were the most common. 
+
+![HIVE_Result_5_1](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Output%20Screenshots/HIVE/total_number_of_each_rating.png?raw=true "HIVE Analysis 5 (all ratings)")
+
+The second output filters the above result to only list the one most popular rating and how many times it was chosen.
+
+![HIVE_Result_5_2](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Output%20Screenshots/HIVE/most_popular_rating.png?raw=true "HIVE Analysis 5 (most chosen rating)")
 
 ### HIVE Analysis 6: Exploring how the Ratings are Distributed by Genre
 
