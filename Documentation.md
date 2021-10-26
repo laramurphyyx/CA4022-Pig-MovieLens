@@ -73,7 +73,11 @@ The output shows that Forrest Gump received the most ratings, with a total of 32
 ![HIVE_Result_1](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Output%20Screenshots/HIVE/movie_with_highest_number_ratings.png?raw=true "HIVE Analysis 1")
 
 ### HIVE Analysis 2: Finding the Movie with the Highest Proportion of Five Star Ratings
+This analysis involved creating two initial tables, one containing the number of five stars each movie received and one containing the total number of ratings each movie received. This table was then merged into a new table and a column for the proportion of five star reviews was calculated. 
 
+The original result was limited to movies with over 100 ratings, to filter out movies that may have one single five star rating (100% five-star ratings).
+
+![HIVE_Result_2](https://github.com/laramurphyyx/CA4022-Pig-MovieLens/blob/main/Output%20Screenshots/HIVE/movies_with_highest_proportion_five_stars.png?raw=true "HIVE Analysis 2")
 
 ### HIVE Analysis 3: Finding the Users with the Highest Average Rating
 This query calculated the average rating given by each user. This result was put in descending order and outputted the user ID, the total amount of ratings and the average rating of the five users with the highest average rating.
